@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats.Solution.csproj": {}
+    "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\PierresTreats.Solution.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats.Solution.csproj": {
+    "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\PierresTreats.Solution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats.Solution.csproj",
+        "projectUniqueName": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\PierresTreats.Solution.csproj",
         "projectName": "PierresTreats.Solution",
-        "projectPath": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats.Solution.csproj",
+        "projectPath": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\PierresTreats.Solution.csproj",
         "packagesPath": "C:\\Users\\jpete\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\obj\\",
+        "outputPath": "C:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jpete\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,32 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0-alpha.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -47,6 +71,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
