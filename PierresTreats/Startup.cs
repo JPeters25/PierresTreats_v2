@@ -4,12 +4,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
+using PierresTreats.Models;
 using Microsoft.AspNetCore.Identity;
 
-using PierresTreats.Models;
-
-namespace PierresTreats
+namespace RecipeBox
 {
   public class Startup
   {
@@ -30,12 +28,31 @@ namespace PierresTreats
       services.AddEntityFrameworkMySql()
         .AddDbContext<PierresTreatsContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
+      
+      services.AddIdentity<ApplicationUser, IdentityRole>()
+        .AddEntityFrameworkStores<PierresTreatsContext>()
+        .AddDefaultTokenProviders();
+
+      services.Configure<IdentityOptions>(options =>
+      {
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 0;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequiredUniqueChars = 0;
+      });
     }
 
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
+
+      app.UseAuthentication(); 
+
       app.UseRouting();
+      
+      app.UseAuthorization();
 
       app.UseEndpoints(routes =>
       {
@@ -43,10 +60,10 @@ namespace PierresTreats
       });
 
       app.UseStaticFiles();
-      
+
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Error Page Does not Exist");
+        await context.Response.WriteAsync("Hello World!");
       });
     }
   }

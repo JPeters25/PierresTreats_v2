@@ -4,7 +4,7 @@ using PierresTreats.Models;
 using System.Threading.Tasks;
 using PierresTreats.ViewModels;
 
-namespace PierrsTreats.Controllers
+namespace PierresTreats.Controllers
 {
   public class AccountController : Controller
   {
