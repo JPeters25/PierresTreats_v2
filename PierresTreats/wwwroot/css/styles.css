@@ -98,6 +98,9 @@ div#footer {
 {
   overflow-y: auto;
   z-index: 1;
+  text-align: center;
+  padding-top: 10px;
+
 }
 
 .card-img
