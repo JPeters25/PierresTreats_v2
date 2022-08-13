@@ -16,3 +16,26 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+@font-face {
+  font-family: Russhell;
+  src:url(../Font/RusshellFree-Gx1g.otf);
+}
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+}
+
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--bs-light);
+  border-radius: .3rem; 
+  font-family: Russhell; 
+}

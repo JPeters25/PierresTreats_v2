@@ -21,7 +21,6 @@ C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Flavors\Index.cshtml.g.cs
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Treats\AddFlavors.cshtml.g.cs
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Treats\Create.cshtml.g.cs
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Treats\Delete.cshtml.g.cs
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Treats\Details.cshtml.g.cs
@@ -55,3 +54,4 @@ C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\PierresTreats.Solution.csproj.CopyComplete
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\PierresTreats.Solution.genruntimeconfig.cache
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\ref\PierresTreats.Solution.dll
+C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Flavors\AddTreat.cshtml.g.cs
