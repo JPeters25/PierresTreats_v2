@@ -20,6 +20,7 @@ namespace PierreTreats.Controllers
 
     public FlavorsController(UserManager<ApplicationUser> userManager, PierresTreatsContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 

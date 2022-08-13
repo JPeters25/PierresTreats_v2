@@ -1,11 +1,24 @@
-html {
-  font-size: 14px;
+@font-face {
+  font-family: MalayaRegular;
+  src:url("../Fonts/MalayaRegular-e8jO.ttf");
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@font-face {
+  font-family: Pasta;
+  src:url("../Fonts/CrunchyPasta-8MMoz.otf");
+}
+
+@font-face {
+  font-family: Cassandra;
+  src:url("../Fonts/CassandraPersonalUseRegular-3BjG.ttf");
+  font-size: 72px;
+}
+
+
+
+
+html {
+  font-size: 14px;
 }
 
 html {
@@ -15,11 +28,11 @@ html {
 
 body {
   margin-bottom: 60px;
-}
-
-@font-face {
-  font-family: Russhell;
-  src:url(../Font/RusshellFree-Gx1g.otf);
+  background-image: url(../Img/background.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+  height: 150%;
 }
 
 div#footer {
@@ -35,7 +48,60 @@ div#footer {
 .jumbotron {
   padding: 4rem 2rem;
   margin-bottom: 2rem;
-  background-color: var(--bs-light);
   border-radius: .3rem; 
-  font-family: Russhell; 
+  font-family: Cassandra;
+  font-size: 48px;
+  color: white;
 }
+
+
+
+.card {
+  float: left;
+  width: 50%;
+}
+
+
+#navigation {
+  text-align: center;
+  
+}
+
+#SlideCard
+{
+  background-color: black;
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+}
+
+#registerCard
+{
+  /* background-image: url(../img/wheat.jpg); */
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.card-text
+{
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.card-img
+{
+  opacity: .35;
+}
+

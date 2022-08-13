@@ -15697,6 +15697,11 @@
       "FilePath": "c:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\Views\\Flavors\\Create.cshtml",
       "TargetPath": "Views\\Flavors\\Create.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jpete\\OneDrive\\Desktop\\Coding\\PierresTreats.Solution\\PierresTreats\\Views\\Shared\\Footer.cshtml",
+      "TargetPath": "Views\\Shared\\Footer.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

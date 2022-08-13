@@ -8,6 +8,13 @@
 
 <h3>Log in with you account</h3>
 <hr />
+
+ @if (User.Identity.IsAuthenticated)
+    {
+      <p>Hello @User.Identity.Name!</p>
+    }
+  else
+  {
 @using (Html.BeginForm())
   {
     @Html.LabelFor(m => m.Email)
@@ -18,3 +25,7 @@
 
     <input type="submit" value="Log in" class="btn btn-default" />
   }
+}
+<br>
+
+<button class="btn btn-outline-primary">@Html.ActionLink("Home", "Index", "Home")</button>

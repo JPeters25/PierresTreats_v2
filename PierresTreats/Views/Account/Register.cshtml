@@ -6,19 +6,64 @@
 
 @model RegisterViewModel
 
-<h2>Register a new user</h2>
-<hr />
+<div class="row">
+  <div class="jumbotron text-center">
+    <h2>Welcome to Pierre's Treats!</h2>
+  </div>
+</div>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
-{
-    @Html.LabelFor(user => user.Email)
-    @Html.TextBoxFor(user=> user.Email)
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src='../img/logo.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Flavors","Index","Flavors")>Flavors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Treats","Index","Treats")>Treats</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <button class="btn btn-outline-primary">@Html.ActionLink("Log In", "Index", "Account")</button>
+        <button class="btn btn-outline-primary">@Html.ActionLink("Create an account", "Register", "Account")</button>
+      </span>
+    </div>
+  </div>
+</nav>
 
-    @Html.LabelFor(user=> user.Password)
-    @Html.PasswordFor(user=> user.Password)
+<div class="row">
+  <div class="card bg-dark text-white" id="registerCard">
+    <img class="card-img" src='../img/wheat.jpg' alt=car image">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Register a new user</h5>
+          <div class="card-text">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+            @Html.LabelFor(user => user.Email)
+            @Html.TextBoxFor(user=> user.Email)
 
-    @Html.LabelFor(user=> user.ConfirmPassword)
-    @Html.PasswordFor(user=> user.ConfirmPassword)
+            @Html.LabelFor(user=> user.Password)
+            @Html.PasswordFor(user=> user.Password)
 
-    <input type="submit" value="Register" />
-}
+            @Html.LabelFor(user=> user.ConfirmPassword)
+            @Html.PasswordFor(user=> user.ConfirmPassword)
+
+            @Html.LabelFor(user=> user.UserName)
+            @Html.TextBoxFor(user=> user.UserName)
+
+            <input type="submit" value="Register" />
+            }
+          </div>
+      </div>
+  </div>
+</div>
+
+
+

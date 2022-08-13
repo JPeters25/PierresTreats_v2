@@ -55,3 +55,4 @@ C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\PierresTreats.Solution.genruntimeconfig.cache
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\ref\PierresTreats.Solution.dll
 C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Flavors\AddTreat.cshtml.g.cs
+C:\Users\jpete\OneDrive\Desktop\Coding\PierresTreats.Solution\PierresTreats\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs

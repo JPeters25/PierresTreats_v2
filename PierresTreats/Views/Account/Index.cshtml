@@ -2,22 +2,21 @@
   Layout = "_Layout";
 }
 
-@using System.Security.Claims
+<div class="jumbotron text-center">
+  <h2>Welcome to the Pierres Treats!</h2>
+</div>
 
-<h2>Welcome! Please Login</h2>
-<hr />
+<div id=TopBar>
+    <p>@Html.ActionLink("Flavors", "Index", "Flavors") | @Html.ActionLink("Treats", "Index", "Treats")</p>
+</div>
+
+<div class="text-center">
+
   @if (User.Identity.IsAuthenticated)
-    {
-      <p>Hello @User.Identity.Name!</p>
-      @using (Html.BeginForm("LogOff", "Account"))
+{
+    <p>Hello @User.Identity.Name!</p>
+    @using (Html.BeginForm("LogOff", "Account"))
     {
       <input type="submit" class="btn btn-default" value="Log out" />
     }
-  }
-  else
-  {
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-  }
-
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+}
