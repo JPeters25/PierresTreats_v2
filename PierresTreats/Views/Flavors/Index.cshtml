@@ -9,6 +9,32 @@
   <h2>Flavors List</h2>
 </div>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src='img/logo.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Flavors","Index","Flavors")>Flavors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Treats","Index","Treats")>Treats</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <button class="btn btn-outline-primary">@Html.ActionLink("Log In", "Index", "Account")</button>
+        <button class="btn btn-outline-primary">@Html.ActionLink( "Create an account", "Register", "Account" )</button>
+      </span>
+    </div>
+  </div>
+</nav>
+
 @if (@Model.Count == 0)
 {
   <h3>No categories have been added yet!</h3>

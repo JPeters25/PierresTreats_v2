@@ -8,32 +8,31 @@
 <div class="jumbotron text-center">
   <h2>Treat List</h2>
 </div>
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse">
+    <a class="navbar-brand" href="#"><img class="logo" src='img/logo.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          @Html.ActionLink("Home", "Index", "Home", null, new { @class="nav-link" })
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")>Home</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Flavor
-          </a>
-          <ul class="dropdown-menu">
-            <li>@Html.ActionLink("All Flavors", "Index", "Flavors", null, new { @class="dropdown-item" })</li>
-            <li>@Html.ActionLink("New Flavor", "Create", "Flavors", null, new { @class="dropdown-item" })</li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Flavors","Index","Flavors")>Flavors</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Treat
-          </a>
-          <ul class="dropdown-menu">
-            <li>@Html.ActionLink("All Treat", "Index", "Treats", null, new { @class="dropdown-item" })</li>
-            <li>@Html.ActionLink("New Treat", "Create", "Treat", null, new { @class="dropdown-item" })</li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Treats","Index","Treats")>Treats</a>
         </li>
       </ul>
+      <span class="navbar-text">
+        <button class="btn btn-outline-primary">@Html.ActionLink("Log In", "Index", "Account")</button>
+        <button class="btn btn-outline-primary">@Html.ActionLink( "Create an account", "Register", "Account" )</button>
+      </span>
+    </div>
+  </div>
+
       <div>
         @using (Html.BeginForm("Index", "Treats", FormMethod.Get))
         {
@@ -45,9 +44,8 @@
       </div>
     </div>
   </div>
-</nav>
 <hr />
-
+</nav>
 <div class="jumbotron text-center">
     <h2>Treats for @User.Identity.Name</h2>
 </div>
