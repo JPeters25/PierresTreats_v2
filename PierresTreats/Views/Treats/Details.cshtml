@@ -4,34 +4,77 @@
 
 @model PierresTreats.Models.Treat
 
-<div class="jumbotron text-center">
-  <h2>Treat Details</h2>
+<div class="row">
+  <div class="jumbotron text-center">
+    <h2>Pierre's Treats</h2>
+  </div>
 </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src='/img/logo.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Flavors","Index","Flavors")>Flavors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Treats","Index","Treats")>Treats</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <button class="btn btn-outline-primary">@Html.ActionLink("Log In", "Login", "Account")</button>
+        <button class="btn btn-outline-primary">@Html.ActionLink( "Create an account", "Register", "Account" )</button>
+      </span>
+    </div>
+  </div>
+      <div>
+        @using (Html.BeginForm("Index", "Treats", FormMethod.Get))
+        {
+          <div class="d-flex" role="search">
+            @Html.TextBox("SearchString", null, new { type="search", placeholder = "Search", @class="form-control me-2"})
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+<hr />
+</nav>
+<div class="row">
+  <div class="card" id=treatCard>
+    <h3 class="card-title">Treat Details</h3>
+      <div class="card-body">
+        <div id=treatList>
+          <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+          @if(@Model.JoinEntities.Count == 0)
+          {
+            <p>This treat does not have flavor
 
-@if(@Model.JoinEntities.Count == 0)
-{
-  <p>This treat does not have any flavor</p>
-}
-else
-{
-  <h4>Flavor the flavor belongs to:</h4>
-  <ul>
-  @foreach(var join in Model.JoinEntities)
-  {
-    <li>@join.Flavor.Description</li>
-    @using (Html.BeginForm("DeleteFlavor", "Treats"))
-    {
-      @Html.Hidden("joinId", @join.FlavorTreatId)
-      <input type="submit" value="Delete"/>
-    }
-  }
-  </ul>
-}
+            </p>
+          }
+          else
+          {
+            <h4>Flavors:</h4>
+            <ul>
+            @foreach(var join in Model.JoinEntities)
+            {
+              <li>@Html.ActionLink($"{join.Flavor.Description}", "Details", "Flavors", new { id = join.Flavor.FlavorId })</li>
+            }
+            </ul>
+          }
 
-<p>@Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
-
-<p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
+          <p>@Html.ActionLink("Edit treat", "Edit", new { id = Model.TreatId })</p>
+          <p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
+          </br>
+          <button class="btn btn-primary bt-sm">@Html.ActionLink("All Treats", "Index", "Treats")</button>
+        </div>
+      </div>
+  </div>
+</div>

@@ -107,4 +107,76 @@ div#footer {
   opacity: .35;
 }
 
+#AccountIndexCard
+{
+  background-color: rgb(43, 43, 43);
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: white;
+}
+
+#flavorCard
+{
+  background-color: rgb(43, 43, 43);
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: white;
+}
+
+#treatCard
+{
+  background-color: rgb(43, 43, 43);
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: white;
+}
+
+#deleteCard
+{
+  background-color: rgb(43, 43, 43);
+  margin-right: 800;
+  margin: auto;
+  width:50%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: white;
+}
+
+a
+{
+  color: white
+}
+
+a:hover
+{
+  color: goldenrod;
+  font-size: 18px;
+}
+
+a:visited
+{
+  color:white
+}
+
 

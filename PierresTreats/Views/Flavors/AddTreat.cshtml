@@ -4,20 +4,59 @@
 
 @model PierresTreats.Models.Flavor
 
-<div class="jumbotron text-center">
-  <h2>Add a Treat</h2>
+<div class="row">
+  <div class="jumbotron text-center">
+    <h2>Pierre's Treats</h2>
+  </div>
 </div>
 
-<h4>Add a Treat to this Flavor: @Html.DisplayFor(model => model.Description)</h4>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src='/img/logo.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Flavors","Index","Flavors")>Flavors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Treats","Index","Treats")>Treats</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        @using (Html.BeginForm("LogOff", "Account"))
+        {
+          <input type="submit" class="btn btn-outline-primary" value="Log out" />
+        }
+      </span>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="card" id=flavorCard>
+    <h3 class="card-title">Add a Treat to this Flavor: @Html.DisplayFor(model => model.Description)</h3>
+      <div class="card-body">
+        <div id=flavorList>
+          @using (Html.BeginForm())
+          {
+            @Html.HiddenFor(model => model.FlavorId)
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.FlavorId)
+            @Html.Label("Select treat")
+            @Html.DropDownList("TreatId")
 
-  @Html.Label("Select treat")
-  @Html.DropDownList("TreatId")
+            <input type="submit" value="Save" />
+          }
+          <br>
+          <button class="btn btn-primary bt-sm">@Html.ActionLink("All Flavors", "Index", "Flavors")</button>
+        </div>
+    </div>
+  </div>
+</div>
 
-  <input type="submit" value="Save" />
-}
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+
