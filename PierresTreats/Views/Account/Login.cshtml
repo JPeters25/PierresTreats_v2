@@ -43,28 +43,16 @@
       <div class="card-img-overlay">
         <h3 class="card-title">Log in</h3>
           <div class="card-text">
-            @if (User.Identity.IsAuthenticated)
+               @using (Html.BeginForm())
                 {
-                  <p>Hello @User.Identity.Name!</p>
-
-                  @using (Html.BeginForm("LogOff", "Account"))
-                    {
-                      <input type="submit" class="btn btn-outline-primary" value="Log out" />
-                    }
+                  @Html.LabelFor(m => m.Email)
+                  @Html.TextBoxFor(m => m.Email)
+                  <br>
+                  @Html.LabelFor(m => m.Password)
+                  @Html.PasswordFor(m => m.Password)
+                  <br>
+                  <input type="submit" value="Log in" class="btn btn-primary" />
                 }
-              else
-              {
-            @using (Html.BeginForm())
-              {
-                @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email)
-                <br>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-                <br>
-                <input type="submit" value="Log in" class="btn btn-primary" />
-              }
-            }
           </div>
       </div>
   </div>

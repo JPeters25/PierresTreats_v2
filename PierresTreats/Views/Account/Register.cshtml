@@ -58,17 +58,10 @@
             <br />
             @Html.PasswordFor(user=> user.ConfirmPassword)
             <br />
-            @Html.LabelFor(user=> user.UserName)
-            <br />
-            @Html.TextBoxFor(user=> user.UserName)
-            <br />
-            <button class="registerBtn" input type="submit">@Html.ActionLink("Register", "Index", "Account")</button>
-            @* <input type="submit" value="Register" /> *@
+            @* <button class="registerBtn" input type="submit">@Html.ActionLink("Register", "Index", "Account")</button> *@
+            <input type="submit" value="Register" />
             }
           </div>
       </div>
   </div>
 </div>
-
-
-

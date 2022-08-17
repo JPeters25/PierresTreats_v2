@@ -9,8 +9,8 @@ using PierresTreats.Models;
 namespace PierresTreats.Solution.Migrations
 {
     [DbContext(typeof(PierresTreatsContext))]
-    [Migration("20220815195039_newdata")]
-    partial class newdata
+    [Migration("20220817001240_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

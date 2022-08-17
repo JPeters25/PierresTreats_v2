@@ -38,10 +38,10 @@
   <div class="card" id="AccountIndexCard">
     <div class="card-body">
       <div class="card-text">
-  @if (User.Identity.IsAuthenticated)
-{
-    <h4>Hello & Welcome @User.Identity.Name!</h4>
-}
+            @if (User.Identity.IsAuthenticated)
+          {
+              <h4>Hello & Welcome @User.Identity.Name!</h4>
+          }
       </div>
     </div>
   </div>

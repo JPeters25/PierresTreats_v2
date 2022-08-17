@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using PierresTreats.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace RecipeBox
+namespace PierresTreats
 {
   public class Startup
   {

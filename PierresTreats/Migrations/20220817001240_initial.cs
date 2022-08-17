@@ -48,16 +48,16 @@ namespace PierresTreats.Solution.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Flavors",
+                name: "Treats",
                 columns: table => new
                 {
-                    FlavorId = table.Column<int>(type: "int", nullable: false)
+                    TreatId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
+                    Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Flavors", x => x.FlavorId);
+                    table.PrimaryKey("PK_Treats", x => x.TreatId);
                 });
 
             migrationBuilder.CreateTable(
@@ -167,19 +167,19 @@ namespace PierresTreats.Solution.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Treats",
+                name: "Flavors",
                 columns: table => new
                 {
-                    TreatId = table.Column<int>(type: "int", nullable: false)
+                    FlavorId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     UserId = table.Column<string>(type: "varchar(255) CHARACTER SET utf8mb4", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Treats", x => x.TreatId);
+                    table.PrimaryKey("PK_Flavors", x => x.FlavorId);
                     table.ForeignKey(
-                        name: "FK_Treats_AspNetUsers_UserId",
+                        name: "FK_Flavors_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -250,6 +250,11 @@ namespace PierresTreats.Solution.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Flavors_UserId",
+                table: "Flavors",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FlavorTreat_FlavorId",
                 table: "FlavorTreat",
                 column: "FlavorId");
@@ -258,11 +263,6 @@ namespace PierresTreats.Solution.Migrations
                 name: "IX_FlavorTreat_TreatId",
                 table: "FlavorTreat",
                 column: "TreatId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Treats_UserId",
-                table: "Treats",
-                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
